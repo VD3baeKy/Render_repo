@@ -20,7 +20,7 @@ FROM openjdk:17-jdk-slim
 
 # アプリケーションのJARファイルをコピー
 COPY --from=build /app/target/*.jar /app/app.jar
-EXPOSE ${SER_PORT}
+EXPOSE 10000
 # アプリケーションの実行
 CMD ["java", "-jar", "/app/app.jar"]
 
