@@ -22,7 +22,7 @@ public class SecurityConfig {
         String passEnv = System.getenv("ACCESS_PASS");
         //.password(passwordEncoder().encode("bmrkepmvd"))
         UserDetails user = User
-                .withUsername("user")
+                .withUsername("visitor")
                 .password(passwordEncoder().encode(passEnv))
                 .roles("USER")
                 .build();
